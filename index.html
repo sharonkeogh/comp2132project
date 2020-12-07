@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Dice Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Montserrat:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<header>
+		<h1>Dice Game</h1>
+		<section>
+			<img src="images/rolling_dice.gif" alt="Rolling Dice">
+		</section>
+</header>
+
+<div id="wrapper">
+	<main>
+		<section >
+			<h2>Let's Play !!</h2>
+			<div class = btn-align>
+				<button id="btn-new-game">New Game</button>
+			</div>
+			<div class = game_rounds>
+				<article >
+					<h2>Round</h2>
+				</article>
+				<article>
+					<h2>Player</h2>
+					<div class = btn-align>
+						<button id="btn-roll-dice-player">Roll Dice</button>
+					</div>
+				</article>
+				<article>
+					<h2>Opponent</h2>
+					<div class = btn-align>
+						<button id="btn-roll-dice-opp">Roll Dice</button>
+					</div>
+
+				</article>
+				<article>
+					<h2>Score</h2>
+				</article>
+			</div>
+
+			<div class = game_rounds>
+				<article >
+					<p>1</p>
+				</article>
+				<article>
+					<p  id="player_game_round1"></p>
+				</article>
+				<article>
+					<p  id="opp_game_round1"></p>
+				</article>
+				<article>
+					<p class = score1></p>
+				</article>
+			</div>
+			<div class = game_rounds >
+				<article >
+					<p>2</p>
+				</article>
+				<article>
+					<p id="player_game_round2"></p>
+				</article>
+				<article>
+					<p  id="opp_game_round2"></p>
+				</article>
+				<article>
+					<p class = score2></p>
+				</article>
+			</div>			
+			<div class = game_rounds class="game_round3">
+				<article >
+					<p>3</p>
+				</article>
+				<article>
+					<p  id="player_game_rounds"></p>
+				</article>
+				<article>
+					<p  id="opp_game_round3"></p>
+				</article>
+				<article>
+					<p class = score3></p>
+				</article>
+			</div>
+			<div class = game_rounds class="game_total">
+				<article >
+					<p>Total Score</p>
+				</article>
+				<article>
+					<p class = pWinnerOrLoser></p>
+				</article>
+				<article>
+					<p class = oWinnerOrLoser></p>
+				</article>
+				<article>
+					<p class = total></p>
+				</article>
+			</div>				
+		</section>
+		<section>
+			<div class = rules>
+				<aside>
+					<h2>Game Play</h2>
+					<ul>
+						<li>Click on Roll Dice button to start round.</li>
+						<li>Score from 3 rolls is totalled to determine winner.</li>
+					</ul>
+				</aside>
+				<aside>
+					<h2>Scoring</h2>
+					<ul>
+						<li>Dice values are added together for each round</li>
+						<li>However, if a 1 is rolled, score is 0 for round.</li>
+						<li>Also, if a pair of same numbers is rolled, total is doubled. </li>
+					</ul>
+				
+				</aside>
+			</div>
+		</section>
+		
+	</main>
+	<footer>
+		<h2>Game Treasure Inc.</h2>
+		<div>
+			<h2>Credits</h2>
+			<p>Sharon Keogh</p>
+		</div>
+		
+		<div>
+			<h2>Contact</h2>
+			<p><a class="link" href="sharonkeogh@bcit.ca">sharonkeogh@bcit.ca</a></p>
+		</div>
+	</footer>
+</div>
+
+
+<script src="scripts/menu.js"></script>
+</body>
+</html>
