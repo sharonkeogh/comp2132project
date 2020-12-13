@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 	<title>Dice Game</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Montserrat:400,400i,700,700i" rel="stylesheet">
+
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -19,85 +19,115 @@
 	<main>
 		<section >
 			<h2>Let's Play !!</h2>
-			<div class = btn-align>
-				<button id="btn-new-game">New Game</button>
-			</div>
+            <div class = btn-align>
+                <button id="btnRollDice">Roll Dice</button>
+
+				<button id="btnNewGame">New Game</button>
+            </div>
+            
 			<div class = game_rounds>
 				<article >
 					<h2>Round</h2>
 				</article>
-				<article>
+				<article >
 					<h2>Player</h2>
-					<div class = btn-align>
-						<button id="btn-roll-dice-player">Roll Dice</button>
-					</div>
+
 				</article>
 				<article>
 					<h2>Opponent</h2>
-					<div class = btn-align>
-						<button id="btn-roll-dice-opp">Roll Dice</button>
-					</div>
+
 
 				</article>
 				<article>
-					<h2>Score</h2>
+                    <h2>Score</h2>
+                    <p>Player : Opponent</p>
 				</article>
 			</div>
 
-			<div class = game_rounds>
-				<article >
+			<div class = "game_rounds round1">
+				<article class = round1Num>
+                    <p></p>
 					<p>1</p>
 				</article>
 				<article>
-					<p  id="player_game_round1"></p>
+					<div id="player_game_round1">
+                        <img id="playerR1Di1" src="images/6.jpg" alt="Number 6 Die">
+                        <img id="playerR1Di2" src="images/6.jpg" alt="Number 6 Die">
+                    </div>
 				</article>
 				<article>
-					<p  id="opp_game_round1"></p>
+					<div id="opp_game_round1">
+                        <img id="oppR1Di1" src="images/6.jpg" alt="Number 6 Die">
+                        <img id="oppR1Di2" src="images/6.jpg" alt="Number 6 Die">
+                    </div>
 				</article>
 				<article>
-					<p class = score1></p>
+                    <p></p>
+					<p id = score1></p>
 				</article>
 			</div>
-			<div class = game_rounds >
-				<article >
+			<div class = "game_rounds round2"  >
+				<article class = round2Num>
+                    <p></p>
 					<p>2</p>
 				</article>
 				<article>
-					<p id="player_game_round2"></p>
+					<div id="player_game_round2">
+                        <img id="playerR2Di1" src="images/6.jpg" alt="Number 6 Die">
+                        <img id="playerR2Di2" src="images/6.jpg" alt="Number 6 Die">
+                        <p></p>
+                    </div>
 				</article>
 				<article>
-					<p  id="opp_game_round2"></p>
+					<div id="opp_game_round2">
+                        <img id="oppR2Di1" src="images/6.jpg" alt="Number 6 Die">
+                        <img id="oppR2Di2" src="images/6.jpg" alt="Number 6 Die">
+                    </div>
 				</article>
 				<article>
-					<p class = score2></p>
+                    <p></p>
+					<p id = score2></p>
 				</article>
 			</div>			
-			<div class = game_rounds class="game_round3">
-				<article >
+			<div class = "game_rounds round3">
+				<article class = round3Num>
+                    <p></p>
 					<p>3</p>
 				</article>
 				<article>
-					<p  id="player_game_rounds"></p>
+					<div id="player_game_round3">
+                        <img id="playerR3Di1" src="images/6.jpg" alt="Number 6 Die">
+                        <img id="playerR3Di2" src="images/6.jpg" alt="Number 6 Die">
+                    </div>
 				</article>
 				<article>
-					<p  id="opp_game_round3"></p>
+					<div id="opp_game_round3">
+                        <img id="oppR3Di1" src="images/6.jpg" alt="Number 6 Die">
+                        <img id="oppR3Di2" src="images/6.jpg" alt="Number 6 Die">
+                    </div>
 				</article>
 				<article>
-					<p class = score3></p>
+                    <p></p>
+					<p id = score3></p>
 				</article>
 			</div>
-			<div class = game_rounds class="game_total">
-				<article >
-					<p>Total Score</p>
+			<div class = "game_rounds game_total">
+				<article class = totalScore>
+                    <p></p>
+                    <p>Total Score</p>
+
 				</article>
-				<article>
-					<p class = pWinnerOrLoser></p>
+				<article class = playerTotalBox>
+                    <p></p>
+					<p id = "playerTotal"></p>
 				</article>
-				<article>
-					<p class = oWinnerOrLoser></p>
+				<article class = oppTotalBox>
+                    <p></p>
+					<p id = "oppTotal"></p>
 				</article>
-				<article>
-					<p class = total></p>
+				<article class=result>
+                    <p></p>
+					<p id = gameWinner></p>
 				</article>
 			</div>				
 		</section>
@@ -107,7 +137,8 @@
 					<h2>Game Play</h2>
 					<ul>
 						<li>Click on Roll Dice button to start round.</li>
-						<li>Score from 3 rolls is totalled to determine winner.</li>
+                        <li>Score from 3 rolls is totalled to determine winner.</li>
+                        <li>Click on <em>New Game</em> to play again.</li>
 					</ul>
 				</aside>
 				<aside>
@@ -124,20 +155,10 @@
 		
 	</main>
 	<footer>
-		<h2>Game Treasure Inc.</h2>
-		<div>
-			<h2>Credits</h2>
-			<p>Sharon Keogh</p>
-		</div>
-		
-		<div>
-			<h2>Contact</h2>
-			<p><a class="link" href="sharonkeogh@bcit.ca">sharonkeogh@bcit.ca</a></p>
-		</div>
+
 	</footer>
 </div>
-
-
-<script src="scripts/menu.js"></script>
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/dice.js"></script>
 </body>
 </html>
